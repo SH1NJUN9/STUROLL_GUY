@@ -1,4 +1,7 @@
 import discord
+import os
+
+
 client = discord.Client()
 
 @client.event
@@ -23,5 +26,5 @@ async def on_message(message):
         await message.channel.send('위-대-한-우-리-의-***')
     if message.content == 'ㅏㅡㅑ':
         await message.channel.send('ㅏㅡㅑ')
-
-client.run('ODc4NTY5MTI5NDY3MDY4NDU2.YSDFQw.wSbDfBqpnfWj5j_5Y_JjMlJZS2k')
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
